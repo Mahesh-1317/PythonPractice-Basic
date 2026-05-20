@@ -12,3 +12,8 @@ print(list3)
 print(list4)
 print(list5)
 print(list6)
+
+del list[1:3]
+print(list)
+del list[:] # Delete whole list
+print(list)

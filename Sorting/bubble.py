@@ -24,4 +24,5 @@ print(count)
 
 # list = [8,10,6,2,4]
 # list.sort()
+# list.reverse()
 # print(list)

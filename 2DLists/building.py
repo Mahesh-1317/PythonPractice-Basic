@@ -1,10 +1,12 @@
 rooms = [[[False for r in range(20)] for r in range(15)] for b in range(3)]
-print(rooms)
+for i in rooms:
+    print(i)
+# print(rooms)
 
-rooms[1][7][14] = True
-rooms[1][7][4] = True
+rooms[1][9][13] = True
+rooms[0][4][1] = False
 vacancy = 0
 for roomNo in range(20):
-    if not rooms[1][7][roomNo]:
+    if not rooms[2][14][roomNo]:
         vacancy == 1
-print("Vacancy in 3rd 15th floor of 3rd Building",vacancy)
+print(vacancy)

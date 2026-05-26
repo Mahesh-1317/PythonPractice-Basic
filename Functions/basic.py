@@ -63,13 +63,79 @@
 # print("This lesson is")
 # boring_fun()
 
-def checkMyVar(var):
-    if(var == 10):
-        print("Variable is 10")
-        return 1
-    else:
-        print("Variable is not up to the mark")
-        return
-print(checkMyVar(10))
-checkMyVar(5)
-print(checkMyVar(5))  
+# def checkMyVar(var):
+#     if(var == 10):
+#         print("Variable is 10")
+#         return 1
+#     else:
+#         print("Variable is not up to the mark")
+#         return
+# print(checkMyVar(10))
+# checkMyVar(5)
+# print(checkMyVar(5))  
+
+#   FUNCTION SCOPE
+
+# def scope_test():
+#     x = 12
+# scope_test()
+# print(x)    # ERROR
+
+# def fun():
+#     print("Do I know that variable?",var)
+# var = 1
+# fun()
+# print(var)
+
+# def mul(x):
+#     var = 7
+#     return x * var
+# var = 3
+# print(mul(7))
+
+# def fun():
+#     global var
+#     var = 2 
+#     print("Variable: ",var)
+# var  =1
+# fun()
+# print(var)
+
+# var = 2
+# print(var)
+# def return_var():
+#     global var
+#     var = 5
+#     return var
+# print(return_var())
+# print(var)
+
+# def myFun(n):
+#     print("I got",n)
+#     n += 1 
+#     print("I have",n)
+# var = 1
+# myFun(var)
+# print(var)
+
+# def list_fun(list1):
+#     print("Print 1: ",list1)
+#     print("Print 2: ",list2)
+#     list1 = [0,1]
+#     print("Print 3: ",list1)
+#     print("Print 4: ",list2)
+
+# list2 = [2,3]
+# list_fun(list2)
+# print("Print 5: ",list2)
+
+def list_fun(list1):
+    print("Print 1: ",list1)
+    print("Print 2: ",list2)
+    del list1[0]
+    print("Print 3: ",list1)
+    print("Print 4: ",list2)
+                                # ASSIGN = NOT AAFFECT (NOT MUTABLE)  
+list2 = [2,3]       # DELETION WORK ON BOTH REFERENCES (GLOBAL AND LOCAL)
+list_fun(list2)
+print("Print 5: ",list2)

@@ -10,5 +10,5 @@ def list_fun(n):
     for i in range(0,n):
         list.insert(0,i)
         #list.append(i+1)
-        return list_fun
+    return list
 print(list_fun(6))

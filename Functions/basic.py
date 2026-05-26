@@ -70,6 +70,6 @@ def checkMyVar(var):
     else:
         print("Variable is not up to the mark")
         return
-checkMyVar(10)
+print(checkMyVar(10))
 checkMyVar(5)
 print(checkMyVar(5))  

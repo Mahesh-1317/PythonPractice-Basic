@@ -1,11 +1,10 @@
 def fib(n):
     if n <= 0:
-        return
+        return 0
     elif n == 1 or n == 2:
         return 1
-    else:
-        fibo1 = fib(n-1)
-        fibo2 = fib(n-2)
-        fibo = fibo1 + fibo2
-        return fibo
-print(fib(5))
+    return fib(n - 1) + fib(n - 2)
+
+n = int(input("Enter a number: "))
+for i in range(1, n + 1):
+    print(fib(i), end=" ")

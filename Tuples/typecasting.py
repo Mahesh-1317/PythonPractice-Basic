@@ -1,14 +1,14 @@
-# t = tuple((1,2,"string"))
-# print(t)
-# print(type(t))
+t = tuple((1,2,"string"))
+print(t)
+print(type(t))
 
-# list = [2,4,5]
-# print(list)
-# print(type(list))
+list = [2,4,5]
+print(list)
+print(type(list))
 
-# tup = tuple(list)
-# print(tup)
-# print(type(tup))
+tup = tuple(list)
+print(tup)
+print(type(tup))
 
 var = 123
 t1 = (1,)

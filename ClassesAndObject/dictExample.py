@@ -12,6 +12,6 @@ object_3 = ExampleClass(4)
 object_3.third = 5
 
 print(object_1)
-print(object_1.__dict__)    # __dict__ USED TO ACCESS MEMBERS
+print(object_1.__dict__)    # __dict__ USED TO PRINT OBJECT'S KEY AND VALUE IN BEAUTIFIED WAY
 print(object_2.__dict__)
 print(object_3.__dict__)

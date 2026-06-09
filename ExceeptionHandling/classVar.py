@@ -7,7 +7,7 @@ class ExampleClass:
         else:
             self.b = 1
 
-obj = ExampleClass(2)
+obj = ExampleClass(6)
 # print(obj.a)
 # print(obj.b)
 

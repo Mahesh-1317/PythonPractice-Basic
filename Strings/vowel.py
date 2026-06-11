@@ -1,8 +1,7 @@
 str = 'Hello, how are YOU doing today?'
-Vowel = {'a','e','i','o','u','A','E','I','O','U'}
-
+Vowel = {'a','e','i','o','u'}
 count = 0
-for vowel in str:
+for vowel in str.lower():
     if vowel in Vowel:
         count += 1
 print(count)

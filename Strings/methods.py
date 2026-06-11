@@ -12,7 +12,7 @@ text2 = '  |  '.join(text1)
 print(text2)
 
 # Check content
-print('hello123'.isalnum())
+print('hello12'.isalnum())
 print('12350'.isdigit())
 print('Python'.isalpha())
 print('   '.isspace())

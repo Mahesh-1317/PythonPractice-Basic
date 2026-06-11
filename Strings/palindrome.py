@@ -12,8 +12,8 @@ print(is_palindrome)
 
 print()
 while i < len(str) / 2:
-    if str[i] != str[len(str) - i - 1]:
-        print(f'{str} is not palindrome')
+    if str[i] == str[len(str) - i - 1]:
+        print(f'{str} is palindrome')
     else:
-        print(f'{str} is palindome')
+        print(f'{str} is not palindome')
     break

@@ -1,8 +1,9 @@
 import pandas as pd
 import csv
+import re
 
 data = {
-    'Name': ['Dr Octopus','Vecna','Dr Octopus','Sambha','Vecna'],
+    'Name': ['Dr Octopus    ','Vecna','Dr    Octopus','   Sambha','Ve  cna'],
     'Age': [21,19,22,20,19],
     'Marks': [85,65,75,99,56],
     'City': ['Rom','Berlin','Tokyo','Berlin','Rom']
@@ -31,11 +32,11 @@ print(df[ (df['Marks'] >= 75) & (df['City'] == 'Tokyo')])
 
 def get_grade(x):
     if x >= 90:
-        return 'A'
+        return 'A#'
     elif x >= 70:
-        return 'B'
+        return 'B*'
     else:
-        return 'C'
+        return 'C$'
     
 df['Grade'] = df['Marks'].apply(get_grade)
 print(df['Grade'])
@@ -54,4 +55,5 @@ print()
 
 df.to_csv('Libraries/Pandas/students.csv',index=False)
 df2 = pd.read_csv("Libraries/Pandas/students.csv")
+df3 = re.sub(r'[^a-zA-Z0-9\s]','',df)
 df2.to_csv('Libraries/Pandas/clean_output.csv',index=False)

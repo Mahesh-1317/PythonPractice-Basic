@@ -55,5 +55,15 @@ print()
 
 df.to_csv('Libraries/Pandas/students.csv',index=False)
 df2 = pd.read_csv("Libraries/Pandas/students.csv")
-df3 = re.sub(r'[^a-zA-Z0-9\s]','',df)
+
+# Clean all string columns (Name, City, Grade etc.)
+for col in df2.select_dtypes(include='object').columns:
+    df2[col] = (
+        df2[col]
+        .str.replace(r'[^a-zA-Z0-9\s]', '', regex=True)  # Remove special characters
+        .str.replace(r'\s+', ' ', regex=True)            # Remove extra spaces
+        .str.strip()                                     # Remove leading/trailing spaces
+    )
+
+print(df2)
 df2.to_csv('Libraries/Pandas/clean_output.csv',index=False)

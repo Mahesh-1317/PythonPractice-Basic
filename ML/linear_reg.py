@@ -16,7 +16,7 @@ model = LinearRegression()
 model.fit(X_train,Y_train)
 
 print(f'Slope:      {model.coef_[0]:.2f} (marks incease per study hour)')
-print(f'fIntercept: {model.intercept_:.2f} (marks at 0 study hour)')
+print(f'Intercept: {model.intercept_:.2f} (marks at 0 study hour)')
 
 Y_pred = model.predict(X_test)
 print(f'R2 Score:   {r2_score(Y_test,Y_pred):.4f} (1.0 = perfect)')

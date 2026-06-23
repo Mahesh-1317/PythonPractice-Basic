@@ -1,6 +1,4 @@
-import numpy as np
 from scipy import stats
-import matplotlib.pyplot as plt
 
 #   Data
 n_A, conv_A = 1000, 54

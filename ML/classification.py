@@ -20,7 +20,7 @@ df = pd.DataFrame({'study':study,'attend':attend,'tasks':tasks,'passed':passed})
 X = df[['study', 'attend', 'tasks']]
 y = df['passed']
 
-X_train,X_test,y_train,y_test = train_test_split(X,y,test_size=0.2,random_state=42)
+X_train,X_test,y_train,y_test = train_test_split(X,y,test_size=0.2,random_state=42,stratify=y)
 
 scaler = StandardScaler()
 Xtr = scaler.fit_transform(X_train)
@@ -41,7 +41,7 @@ plt.title('Confusion Matrix')
 plt.show()
 
 #   Pridict new student
-new = scaler.transform([[7,85,9]])
+new = scaler.transform(pd.DataFrame([[7,85,9]], columns=['study','attend','tasks']))
 pred = model.predict(new)
 prob = model.predict_proba(new)[0]
-print(f'Prediction: {'Pass' if pred == 1 else 'Fail'} | Probability: {prob[1]*100:.1f}%')
+print(f'Prediction: {"Pass" if pred == 1 else "Fail"} | Probability: {prob[1]*100:.1f}%')

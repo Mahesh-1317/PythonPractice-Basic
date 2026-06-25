@@ -57,7 +57,7 @@ df.to_csv('Libraries/Pandas/students.csv',index=False)
 df2 = pd.read_csv("Libraries/Pandas/students.csv")
 
 # Clean all string columns (Name, City, Grade etc.)
-for col in df2.select_dtypes(include='object').columns:
+for col in df2.select_dtypes(include= 'str').columns:
     df2[col] = (
         df2[col]
         .str.replace(r'[^a-zA-Z0-9\s]', '', regex=True)  # Remove special characters

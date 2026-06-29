@@ -13,6 +13,6 @@ df = pd.DataFrame({
 })
 
 #   Box plot - outliers and spread per group
-sns.boxplot(data = df, x = 'city', y='marks',palette='Set2')
+sns.boxplot(data = df, x = 'city', y='marks',palette='Set2',hue="city",legend=False)
 plt.title('Marks Distribution by City')
 plt.show()

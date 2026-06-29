@@ -16,7 +16,7 @@ print(f'Decision Tree Accuracy: {accuracy_score(y_test,dt.predict(X_test)) * 100
 print(export_text(dt,feature_names=list(iris.feature_names)))
 
 #   Visualise tree
-plt.figure(figsize=(14,9))
+plt.figure(figsize=(12,8))
 plot_tree(dt, feature_names=iris.feature_names, class_names=iris.target_names, filled=True, rounded=True, fontsize=9)
 plt.title('Decision Tree, Iris Classification')
 plt.show()
